@@ -58,7 +58,7 @@ def decisionTreeBy(feature,D_weight,groundtruth):
 
 def train(features, Y_label):
     instanceNum = Y_label.__len__()
-    D_weight = [0.1] * instanceNum
+    D_weight =  np.array([0.1]).repeat(instanceNum)
 
     alpha = []
     f_DecisionTree = []
@@ -78,5 +78,6 @@ def train(features, Y_label):
 
 if __name__ == '__main__':
     #train([11, 1, 1, ], [1, 2, 3, 4, 5])
-    a = [2,3].__add__([1,0])
+    a = np.array([0.1]).repeat(10)
+    a = np.hstack([a, np.array([0.2]).repeat(2)])
     print(a)
